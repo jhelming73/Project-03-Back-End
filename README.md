@@ -57,3 +57,7 @@
 ```
         "name": "Project-03-Back-End", => "name": "backend",
 ```
+6. Rename 'Package-03-Back-End' submodule to 'backend'
+```
+        git mv Project-03-Back-End backend
+```
