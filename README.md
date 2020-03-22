@@ -36,20 +36,21 @@
         const express = require('express');
         const cors = require('cors');
         const bodyParser = require('body-parser');
-
+        const app = express();
+        
         // Middleware
-        express.use(bodyParser.urlencoded({ extended: true }));
-        express.use(json());
-        express.use(cors());
-
+        app.use(bodyParser.urlencoded({ extended: true }));
+        app.use(bodyParser.json());
+        app.use(cors());
+        
         // Controllers
-
+        
         // Option for Heroku port
-        express.set("port", process.env.PORT || 8080);
-
+        app.set("port", process.env.PORT || 8080);
+        
         // Start the express server
-        express.listen(express.get("port"), () => {
-            console.log(`✅ PORT: ${express.get("port")} 🌟`);
+        app.listen(app.get("port"), () => {
+            console.log(`✅ LISTENING ON PORT: ${app.get("port")} 🌟`);
         });
 ```
 5. Edit package.json
