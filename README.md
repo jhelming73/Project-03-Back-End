@@ -1,6 +1,6 @@
-# Project-03-Back-End
+# Project-03: backend
 
-# Installation Instructions
+## Installation Instructions
 
 1. ``` touch .gitignore ```
 ```
