@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // Setup for Heroku deployment or local db
 let mongoURI = ""
 if (process.env.NODE_ENV === "production") {
-  mongoURI = process.env.DB_URL;
+  mongoURI = process.env.MONGODB_URI;
 } else {
   mongoURI = "mongodb://localhost/js-grubhub";
 }
