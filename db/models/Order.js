@@ -1,7 +1,8 @@
 const mongoose = require('../connection');
 
 const OrderSchema = new mongoose.Schema({
-      lineItems: [
+       orderId: String     
+     , lineItems: [
         {
             ref: "Product"
           , type: mongoose.Schema.Types.ObjectId
